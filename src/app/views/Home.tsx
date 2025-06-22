@@ -1,10 +1,10 @@
 import type { CraftPageHome } from '../../types'
-import { CraftArea, useCraftInstance, useCraftUrlBuilder } from '@query-api/react'
+import { CraftArea, getCraftInstance, createCraftUrl } from '@query-api/react'
 import { useCraftFetch } from '../composables/useCraftFetch'
 
 export default function Home(props: CraftPageHome) {
-  const {authToken} = useCraftInstance()
-  const url = useCraftUrlBuilder('entries').section('news').limit(3).fields(['title']).buildUrl('all')
+  const {authToken} = getCraftInstance()
+  const url = createCraftUrl('entries').section('news').limit(3).fields(['title']).buildUrl('all')
   const {data: news, loading, error} = useCraftFetch<CraftPageHome[]>(url, authToken) 
 
   if (error) {
