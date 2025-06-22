@@ -8,8 +8,8 @@ import News from './app/views/News'
 import Headline from './app/components/Headline'
 
 craftInit({
-  baseUrl: 'https://backend-craftcms.ddev.site:8443',
-  authToken: 'Bearer tyE9LViYm0HvcVbUErN1wwIa3qyeby1K',
+  baseUrl: 'https://backend-craftcms.ddev.site:8443', // Replace with your Craft CMS URL
+  authToken: 'Bearer tyE9LViYm0HvcVbUErN1wwIa3qyeby1K', // Replace with your Bearer token
   contentMapping: {
     pages: {
       home: Home,
